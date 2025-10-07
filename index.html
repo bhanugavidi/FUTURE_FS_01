@@ -13,10 +13,11 @@
 </head>
 
 <body>
+  <div class="cursor"></div>
   <header>
     <div class="header">
       <div class="header-logo">
-        <h1>Gavidi Bhanu Kumar</h1>
+        <h1>Portfolio</h1>
       </div>
       <div class="hamburger">&#9776;</div>
       <div class="header-menu">
@@ -29,7 +30,76 @@
       </div>
     </div>
   </header>
-  <script src="script.js"></script>
-</body>
+
+
+  </head>
+
+  <body>
+    <div class="hero">
+      <canvas></canvas>
+      <div class="hero-content">
+        <h1>I am Bhanu — A <span>creative web developer</span> and <span>editor</span> who creates magic where design
+          meets code.</h1>
+        <p class="hero-para">A B.Tech 3rd-year student, passionate about <span>crafting web experiences</span> and <span>visual stories</span> — merging creative design with thoughtful execution to build work that connects deeply.
+        </p>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Scroll Down</h2>
+      <p>This is the scrollable part of the website, fully black background.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec semper ligula.</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      const cursor = document.querySelector('.cursor');
+
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursor.style.display = 'block';
+      });
+
+      document.addEventListener('mouseleave', ()=>{
+        cursor.style.display = 'none';
+      })
+      document.addEventListener('mousenter', ()=>{
+        cursor.style.display = 'block';
+      })
+
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const para = document.querySelector(".hero-para");
+
+        // Split words
+        para.innerHTML = para.textContent
+          .split(" ")
+          .map(word => `<span class="word">${word}</span>`)
+          .join(" ");
+
+        para.innerHTML = para.textContent
+          .split(" ")
+          .map(word => {
+            if (word.includes("web") || word.includes("visual") || word.includes("experiences") || word.includes("crafting") || word.includes("stories")) {
+              return `<span class="word highlight">${word}</span>`;
+            }
+            return `<span class="word">${word}</span>`;
+          })
+          .join(" ");
+
+
+        // Animate words
+        gsap.to(".hero-para .word", {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          delay: 0.5
+
+        });
+      });</script>
+  </body>
 
 </html>
