@@ -82,7 +82,7 @@ header {
 }
 
 .header-menu a {
-    text-decoration: none;
+  text-decoration: none;
   margin-left: 30px;
   font-weight: 500;
   position: relative;
@@ -179,15 +179,6 @@ canvas {
   left: -270px;
 }
 
-/* === CONTENT === */
-.content {
-  min-height: 200vh;
-  background: var(--primaryColor);
-  color: white;
-  padding: 50px;
-  font-size: 1.5rem;
-}
-
 /* === TEXT ANIMATION === */
 .hero-para {
   display: inline-block;
@@ -264,4 +255,109 @@ canvas {
   .header-menu.active {
     display: flex;
   }
+}
+
+.about {
+  min-height: 100vh;
+  background: var(--primaryColor);
+  color: var(--accentColor);
+  padding: 50px;
+  font-size: 1.5rem;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.about>h1 {
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.aboutpara {
+  color: var(--secondaryColor);
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.abouttimeline>span {
+  color: rgb(153, 153, 153);
+}
+
+.abouttimeline {
+  margin-bottom: 10px;
+  color: var(--secondaryColor);
+  font-weight: 200;
+  font-size: 22px;
+}
+
+.text1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.text1>.one {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.text1> .one.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text1>.two {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text1> .two.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectslider {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  color: var(--primaryColor);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 50% 50%,
+    transparent
+  );
+}
+
+
+.list {
+  display: flex;
+  gap: 20px;
+}
+
+.card-project {
+  flex: 0 0 300px;
+  height: 200px;
+  background-color: var(--secondaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.projects{
+  min-height: 100vh;
+  background: var(--primaryColor);
+  color: var(--accentColor);
+  padding: 50px;
+  font-size: 1.5rem;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.projects > h1{
+  margin-bottom: 50px;
 }

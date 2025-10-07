@@ -40,17 +40,45 @@
       <div class="hero-content">
         <h1>I am Bhanu — A <span>creative web developer</span> and <span>editor</span> who creates magic where design
           meets code<span>.</span></h1>
-        <p class="hero-para">A B.Tech 3rd-year student, passionate about <span>crafting web experiences</span> and <span>visual stories</span> — merging creative design with thoughtful execution to build work that connects deeply
+        <p class="hero-para">A B.Tech 3rd-year student, passionate about <span>crafting web experiences</span> and
+          <span>visual stories</span> — merging creative design with thoughtful execution to build work that connects
+          deeply
         </p>
       </div>
     </div>
 
-    <div class="content">
-      <h2>Scroll Down</h2>
-      <p>This is the scrollable part of the website, fully black background.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec semper ligula.</p>
+    <div class="about">
+      <h1><span>"</span>About Me</h1>
+      <p class="aboutpara">I am a creative thinker and digital storyteller who loves blending technology and art. I
+        enjoy crafting experiences that capture attention, whether through web design, video editing, or short-form
+        content. Always curious and learning, I strive to push boundaries, turning ideas into engaging digital
+        experiences that resonate with people.</p>
+      <p class="abouttimeline"><span>2017</span>- Discovered a passion for editing and started exploring creativity.</p>
+      <p class="abouttimeline"><span>2021</span>- Launched a lyrical edit page. <span>@dreamvxrse</span></p>
+      <p class="abouttimeline"><span>2022</span>- Reached 110k followers in a year.</p>
+      <p class="abouttimeline"><span>2023</span>- Started coding and learning web development</p>
+      <p class="abouttimeline"><span>2025</span>- Mastering web development, short-form video editing, and storytelling.
+      </p>
+      <div class="text1">
+        <p class="one">inspire.</p>
+        <p class="two">flow.</p>
+        <p class="one">craft.</p>
+      </div>
     </div>
+    <div class="projects">
+      <h1>Recent Projects</h1>
+      <div class="projectslider" style="--width: 200px; --height: 200px; --quantity: 3">
+        <div class="list">
+          <div class="card-project" style="--position: 1">Project 1</div>
+          <div class="card-project" style="--position: 2">Project 2</div>
+          <div class="card-project" style="--position: 3">Project 3</div>
+        </div>
+      </div>
+    </div>
+
+
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
       const cursor = document.querySelector('.cursor');
@@ -61,10 +89,10 @@
         cursor.style.display = 'block';
       });
 
-      document.addEventListener('mouseleave', ()=>{
+      document.addEventListener('mouseleave', () => {
         cursor.style.display = 'none';
       })
-      document.addEventListener('mousenter', ()=>{
+      document.addEventListener('mousenter', () => {
         cursor.style.display = 'block';
       })
 
@@ -99,7 +127,47 @@
           delay: 0.5
 
         });
-      });</script>
+      });
+
+      const faders = document.querySelectorAll('.text1 > p');
+
+      const appearOptions = {
+        threshold: 0.2
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+
+      const list = document.querySelector(".list");
+      const cards = gsap.utils.toArray(".card-project");
+
+      // Duplicate the cards inside the container for seamless loop
+      cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        list.appendChild(clone);
+      });
+
+      const totalWidth = list.scrollWidth / 2; // only original set
+
+      gsap.to(list, {
+        x: -totalWidth,
+        duration: 10,   // adjust speed
+        ease: "linear",
+        repeat: -1
+      });
+
+    </script>
+
+    </script>
   </body>
 
 </html>
