@@ -21,12 +21,12 @@
       </div>
       <div class="hamburger">&#9776;</div>
       <div class="header-menu">
-        <a href="#" class="header-home">Home</a>
-        <a href="#" class="header-aboutme">About Me</a>
-        <a href="#" class="header-projects">Projects</a>
-        <a href="#" class="header-skills">Skills</a>
+        <a href="#home" class="header-home">Home</a>
+        <a href="#about" class="header-aboutme">About Me</a>
+        <a href="#projects" class="header-projects">Projects</a>
+        <a href="#skills" class="header-skills">Skills</a>
         <a href="#" class="header-blog">Blog</a>
-        <a href="#" class="header-contact">Contact</a>
+        <a href="#contact" class="header-contact">Contact</a>
       </div>
     </div>
   </header>
@@ -35,7 +35,7 @@
   </head>
 
   <body>
-    <div class="hero">
+    <div class="hero" id="home">
       <canvas></canvas>
       <div class="hero-content">
         <h1>I am Bhanu — A <span>creative web developer</span> and <span>editor</span> who creates magic where design
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
       <h1><span>"</span>About Me</h1>
       <p class="aboutpara">I am a creative thinker and digital storyteller who loves blending technology and art. I
         enjoy crafting experiences that capture attention, whether through web design, video editing, or short-form
@@ -65,7 +65,7 @@
         <p class="one">craft.</p>
       </div>
     </div>
-    <div class="projects">
+    <div class="projects" id="projects">
       <h1><span>"</span>Recent Projects</h1>
       <div class="projectslider" style="--width: 200px; --height: 200px; --quantity: 3">
         <div class="list">
@@ -78,9 +78,82 @@
         </div>
       </div>
       <p class="project-info">
-        <span>"</span>Work in progress! I’ll add new projects here soon.<span>"</span> - <em>bhanu</em></p>
-        <p class="thanks">Thank you :)</p>
+        <span>"</span>Work in progress! I’ll add new projects here soon.<span>"</span> - <em>bhanu</em>
+      </p>
+      <p class="thanks">Thank you :)</p>
     </div>
+
+    <div class="skills" id="skills">
+      <h1><span>"</span>Skills</h1>
+
+      <p class="skillone">The Logical Side of My Creativity.</p>
+
+      <div class="skillslider coding-slider">
+        <div class="skilllist coding-list">
+          <div class="skill"><img src="images/git.png" alt="Git"></div>
+          <div class="skill"><img src="images/github.png" alt="GitHub"></div>
+          <div class="skill"><img src="images/html5.png" alt="HTML5"></div>
+          <div class="skill"><img src="images/css3.png" alt="CSS3"></div>
+          <div class="skill"><img src="images/js.png" alt="JS"></div>
+          <div class="skill"><img src="images/vscode.png" alt="VS Code"></div>
+          <div class="skill"><img src="images/figma.png" alt="Figma"></div>
+          <div class="skill"><img src="images/py.png" alt="Python"></div>
+          <div class="skill"><img src="images/git.png" alt="Git"></div>
+          <div class="skill"><img src="images/github.png" alt="GitHub"></div>
+          <div class="skill"><img src="images/html5.png" alt="HTML5"></div>
+          <div class="skill"><img src="images/css3.png" alt="CSS3"></div>
+          <div class="skill"><img src="images/js.png" alt="JS"></div>
+          <div class="skill"><img src="images/vscode.png" alt="VS Code"></div>
+          <div class="skill"><img src="images/figma.png" alt="Figma"></div>
+          <div class="skill"><img src="images/py.png" alt="Python"></div>
+        </div>
+      </div>
+
+      <p class="skilltwo">Creative Side — Where Art Meets Motion.</p>
+
+      <div class="skillslider creative-slider">
+        <div class="skilllist creative-list">
+          <div class="skill"><img src="images/ae.png" alt="After Effects"></div>
+          <div class="skill"><img src="images/pr.png" alt="Premiere Pro"></div>
+          <div class="skill"><img src="images/lr.png" alt="Lightroom"></div>
+          <div class="skill"><img src="images/am.png" alt="Audition"></div>
+          <div class="skill"><img src="images/figma.png" alt="Figma"></div>
+          <div class="skill"><img src="images/dr.png" alt="DaVinci Resolve"></div>
+          <div class="skill"><img src="images/blender.png" alt="Blender"></div>
+          <div class="skill"><img src="images/ps.png" alt="Photoshop"></div>
+          <div class="skill"><img src="images/ae.png" alt="After Effects"></div>
+          <div class="skill"><img src="images/pr.png" alt="Premiere Pro"></div>
+          <div class="skill"><img src="images/lr.png" alt="Lightroom"></div>
+          <div class="skill"><img src="images/am.png" alt="Audition"></div>
+          <div class="skill"><img src="images/figma.png" alt="Figma"></div>
+          <div class="skill"><img src="images/dr.png" alt="DaVinci Resolve"></div>
+          <div class="skill"><img src="images/blender.png" alt="Blender"></div>
+          <div class="skill"><img src="images/ps.png" alt="Photoshop"></div>
+        </div>
+      </div>
+      <p class="skill-info"><span>"</span>These are my current tools — constantly learning and evolving.<span>"</span> -
+        <em>bhanu</em>
+      </p>
+    </div>
+
+    <footer class="contact-footer" id="contact">
+      <div class="footer-container">
+        <h2>Let's Connect <span>✉️</span></h2>
+        <p>I'm always open to exciting projects or collaborations. Drop me a message and let's create something amazing
+          together!</p>
+
+        <div class="contact-links">
+          <a href="mailto:bhanugavidi07@gmail.com" class="contact-btn">Email Me</a>
+          <a href="https://www.linkedin.com/in/bhanu-kumar-gavidi-8b468034a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" class="contact-btn">LinkedIn</a>
+          <a href="https://github.com/bhanugavidi" target="_blank" class="contact-btn">GitHub</a>
+        </div>
+
+        <p class="footer-note">Crafted with love and code.</p>
+        <p class="copy">© 2025 Bhanu. All rights reserved.</p>
+      </div>
+    </footer>
+
+
 
 
     <script src="script.js"></script>
@@ -171,7 +244,51 @@
         repeat: -1
       });
 
+
+
     </script>
+
+
+    </script>
+
+    <script>
+      const codingList = document.querySelector(".coding-list");
+      const codingSkills = gsap.utils.toArray(".coding-list .skill");
+
+      // Duplicate each skill dynamically for infinite loop
+      codingSkills.forEach(skill => codingList.appendChild(skill.cloneNode(true)));
+
+      const codingWidth = codingList.scrollWidth / 2;
+
+      gsap.to(codingList, {
+        x: -codingWidth,
+        duration: 30,
+        ease: "linear",
+        repeat: -1
+      });
+
+
+    </script>
+    <script>
+      // Creative Slider Left to Right
+      const creativeList = document.querySelector(".creative-list");
+      const creativeSkills = gsap.utils.toArray(".creative-list .skill");
+
+      // Duplicate each skill dynamically for infinite loop
+      creativeSkills.forEach(skill => creativeList.appendChild(skill.cloneNode(true)));
+
+      const creativeWidth = creativeList.scrollWidth / 2;
+
+      // Set initial position to the left (-half width)
+      gsap.set(creativeList, { x: -creativeWidth });
+
+      // Animate to x = 0 (left to right)
+      gsap.to(creativeList, {
+        x: 0,
+        duration: 30, // adjust speed
+        ease: "linear",
+        repeat: -1
+      });
 
     </script>
   </body>
